@@ -3,7 +3,7 @@
 
 export FUNC = new Map
 
-split_slash = (url)=>
+export splitSlash = (url)=>
   split(url,'/')[0]
 
 < (callback) =>
@@ -12,7 +12,7 @@ split_slash = (url)=>
   notFound = =>
 
   route (url)=>
-    args = FUNC.get split_slash(url)
+    args = FUNC.get splitSlash(url)
     if args
       callback url, ...args
       return
@@ -23,7 +23,7 @@ split_slash = (url)=>
     # set route
     (url, args...)=>
       FUNC.set url, args
-      if split_slash(nowUrl()) == url
+      if splitSlash(nowUrl()) == url
         callback url, ...args
         notFound = 0
       return
