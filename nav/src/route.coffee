@@ -1,3 +1,5 @@
+> @8n/on:On
+
 + PRE
 
 HOOK = []
@@ -16,5 +18,11 @@ HOOK = []
     PRE = url
   return
 
-window.onpopstate = refresh
+< nowUrl = =>
+  PRE
 
+On(
+  window
+  popstate: refresh
+  load: refresh
+)

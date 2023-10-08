@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "repository": "https://github.com/i18n-plugin/plugin.git",
   "homepage": "https://github.com/i18n-plugin/plugin/tree/main/nav",
-  "dependencies": {},
+  "dependencies": { "@8n/on": "^0.0.1" },
   "files": [
     "*"
   ],
