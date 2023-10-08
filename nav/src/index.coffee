@@ -12,8 +12,13 @@ export FUNC = new Map
     http404()
     return
 
-  (url, args...)=>
-    FUNC.set url, args
-    if nowUrl() == url
-      callback url, ...args
-    return
+  [
+    (url, args...)=>
+      FUNC.set url, args
+      if nowUrl() == url
+        callback url, ...args
+      return
+    =>
+      FUNC.clear()
+      return
+  ]
