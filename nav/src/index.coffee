@@ -1,10 +1,11 @@
 > ./route.js:@ > nowUrl
+  @w5/split
 
 export FUNC = new Map
 
 < (callback) =>
   route (url)=>
-    args = FUNC.get url
+    args = FUNC.get split(url,'/')[0]
     if args
       callback url, ...args
       return
