@@ -3,22 +3,37 @@
 
 export FUNC = new Map
 
-< (callback, http404) =>
+split_slash = (url)=>
+  split(url,'/')[0]
+
+< (callback) =>
+
+
+  notFound = =>
+
   route (url)=>
-    args = FUNC.get split(url,'/')[0]
+    args = FUNC.get split_slash(url)
     if args
       callback url, ...args
       return
-    http404()
+    notFound()
     return
 
   [
     (url, args...)=>
       FUNC.set url, args
-      if nowUrl() == url
+      if split_slash(nowUrl()) == url
         callback url, ...args
+        notFound = 0
       return
     =>
       FUNC.clear()
+      notFound = 1
+      return
+    # set no found
+    (func)=>
+      if notFound
+        func()
+      notFound = func
       return
   ]
