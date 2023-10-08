@@ -3,12 +3,13 @@
 
 export FUNC = new Map
 
-< (callback) =>
+< (callback, http404) =>
   route (url)=>
     args = FUNC.get split(url,'/')[0]
     if args
       callback url, ...args
       return
+    http404()
     return
 
   (url, args...)=>
