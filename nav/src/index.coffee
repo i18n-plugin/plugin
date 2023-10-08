@@ -11,7 +11,6 @@ export FUNC = new Map
 
   (url, args...)=>
     FUNC.set url, args
-    console.log nowUrl(), url
     if nowUrl() == url
       callback url, ...args
     return
