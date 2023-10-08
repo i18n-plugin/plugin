@@ -7,6 +7,7 @@ export FUNC = new Map
     args = FUNC.get url
     if args
       callback url, ...args
+      return 1
     return
 
   (url, args...)=>
