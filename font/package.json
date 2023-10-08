@@ -1,7 +1,7 @@
 {
   "name": "@8p/font",
   "type": "module",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "repository": "https://github.com/i18n-plugin/plugin.git",
   "homepage": "https://github.com/i18n-plugin/plugin/tree/main/font",
   "dependencies": {},
