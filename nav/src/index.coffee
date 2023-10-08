@@ -1,5 +1,4 @@
-> ./a.js
-  ./route.js
+> ./route.js
 
 export FUNC = new Map
 
@@ -12,6 +11,6 @@ export FUNC = new Map
     fa = FUNC.get url
     if fa
       [func, args] = fa
-      callback func, args
+      callback func, args, url
     return
   return
