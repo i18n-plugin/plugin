@@ -20,16 +20,20 @@ split_slash = (url)=>
     return
 
   [
+    # set route
     (url, args...)=>
       FUNC.set url, args
       if split_slash(nowUrl()) == url
         callback url, ...args
         notFound = 0
       return
+
+    # clear route
     =>
       FUNC.clear()
       notFound = 1
       return
+
     # set no found
     (func)=>
       if notFound
