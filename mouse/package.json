@@ -1,0 +1,20 @@
+{
+  "name": "@8p/mouse",
+  "type": "module",
+  "version": "0.0.15",
+  "repository": "https://github.com/i18n-plugin/plugin.git",
+  "homepage": "https://github.com/i18n-plugin/plugin/tree/main/mouse",
+  "dependencies": {
+    "gsap": "^3.12.2",
+    "lodash-es": "^4.17.21",
+    "paper": "^0.12.17",
+    "simplex-noise": "^4.0.1"
+  },
+  "files": [
+    "*"
+  ],
+  "exports": {
+    ".": "./lib/index.js",
+    "./*": "./lib/*"
+  }
+}
