@@ -13,8 +13,9 @@ https://github.com/tonsky/FiraCode
 中文
 
 阿里妈妈方圆体
+https://www.iconfont.cn/fonts/detail?cnid=pOvFIr086ADR
 
-https://www.alibabafonts.com/#/more
+字重 400
 
 woff2_compress
 brew install woff2
