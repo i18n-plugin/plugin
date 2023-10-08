@@ -3,14 +3,16 @@
 export FUNC = new Map
 
 < (callback) =>
-  (url, func, args)=>
-    FUNC.set url, [ func, args ]
+  + now
+  route (url)=>
+    now = url
+    args = FUNC.get url
+    if args
+      callback url, ...args
     return
 
-  route (url)=>
-    fa = FUNC.get url
-    if fa
-      [func, args] = fa
-      callback func, args, url
+  (url, args...)=>
+    FUNC.set url, args
+    if now == url
+      callback url, ...args
     return
-  return
