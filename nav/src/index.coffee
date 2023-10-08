@@ -1,8 +1,7 @@
 < =>
-  b = document.createElement 'b'
-  new Body({
-    target: b
-  })
-  document.body.appendChild(b)
-  return
+  [
+    # set
+    (url, func, args)=>
+      return
+  ]
 
