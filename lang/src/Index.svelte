@@ -1,7 +1,7 @@
 <script lang="coffee">
 > ./index.js > set
   ./langLi.js
-  ./_.js:onI18n
+  ./onI18n.js
   @w5/fall
   @8n/on:On
   @8p/title > setHostSlogan
@@ -16,9 +16,9 @@ onMount =>
   e.classList.remove W
   + unbind
   fall(
-    do onI18n (o)=>
-      {lang} = o
-      setHostSlogan o.host, o.slogan
+    do onI18n ({slogan}, {host})->
+      lang = @
+      setHostSlogan host, slogan
       return
     On(
       e
