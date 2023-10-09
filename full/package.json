@@ -1,0 +1,15 @@
+{
+  "name": "@8p/full",
+  "type": "module",
+  "version": "0.0.1",
+  "repository": "https://github.com/i18n-plugin/plugin.git",
+  "homepage": "https://github.com/i18n-plugin/plugin/tree/main/full",
+  "dependencies": {},
+  "files": [
+    "*"
+  ],
+  "exports": {
+    ".": "./lib/Full.svelte",
+    "./*": "./lib/*"
+  }
+}
