@@ -7,8 +7,6 @@ export splitSlash = (url)=>
   split(url,'/')[0]
 
 < (callback) =>
-
-
   notFound = =>
 
   route (url)=>
