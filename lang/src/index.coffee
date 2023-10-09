@@ -8,7 +8,7 @@ _hook = new Set
   lang
 
 < set = (l)=>
-  lang = l
+  document.documentElement.lang = lang = l
   Promise.allSettled [..._hook].map (f)=>
     f l
 
