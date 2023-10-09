@@ -1,0 +1,18 @@
+{
+  "name": "@8p/h404",
+  "type": "module",
+  "version": "0.0.1",
+  "repository": "https://github.com/i18n-plugin/plugin.git",
+  "homepage": "https://github.com/i18n-plugin/plugin/tree/main/h404",
+  "dependencies": {
+    "@8n/on": "^0.0.1",
+    "@8p/title": "^0.0.3"
+  },
+  "files": [
+    "*"
+  ],
+  "exports": {
+    ".": "./lib/404.svelte",
+    "./*": "./lib/*"
+  }
+}
