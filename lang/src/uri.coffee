@@ -8,7 +8,7 @@ _hook = new Set
   onSet (lang)=>
     o = unpack await fBinMd(lang+'/'+uri)
     _hook.forEach (f)=>
-      f.call o[0], lang, ...o.slice(1)
+      f.apply lang, o
       return
     return
   (f)=>
