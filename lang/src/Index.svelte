@@ -2,9 +2,7 @@
 > ./index.js > set
   ./langLi.js
   ./onI18n.js
-  @w5/fall
   @8n/on:On
-  @8p/title > setHostSlogan
 
 LI = []
 W = 'w'
@@ -15,29 +13,23 @@ onMount =>
   [LANG, LI] = await langLi()
   e.classList.remove W
   + unbind
-  fall(
-    do onI18n ({slogan}, {host})->
-      lang = @
-      setHostSlogan host, slogan
+  On(
+    e
+    click:=>
+      unbind?()
+      setTimeout(
+        =>
+          unbind = On(
+            document.body
+            click: =>
+              d = 0
+              unbind()
+              return
+          )
+          return
+      )
+      d = !d
       return
-    On(
-      e
-      click:=>
-        unbind?()
-        setTimeout(
-          =>
-            unbind = On(
-              document.body
-              click: =>
-                d = 0
-                unbind()
-                return
-            )
-            return
-        )
-        d = !d
-        return
-    )
   )
 
 c = (l)=>
