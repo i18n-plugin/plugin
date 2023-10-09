@@ -80,7 +80,7 @@ b
   position absolute
   right -18px
   top 30px
-  width 715px
+  width 610px
 
   &>a
     border-bottom 1px dashed #ccc
