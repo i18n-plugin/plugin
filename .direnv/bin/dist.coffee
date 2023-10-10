@@ -27,7 +27,6 @@ if existsSync src
     package_json_fp
     'utf8'
   )
-  delete json.devDependencies
   {version} = json
 
   version = version.split('.')
@@ -39,9 +38,15 @@ if existsSync src
     JSON.stringify json,null,2
   )
 
+  lib_package_json = {
+    ...json
+  }
+  delete lib_package_json.devDependencies
   writeFileSync(
     join lib, package_json
-    JSON.stringify(json).replaceAll('./lib/','./').replaceAll('"lib/','"./')
+    JSON.stringify(
+      lib_package_json
+    ).replaceAll('./lib/','./').replaceAll('"lib/','"./')
   )
 
   await make cwd

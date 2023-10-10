@@ -36,8 +36,9 @@ onMount =>
       d = !d
       if d
         await tick()
-        maxHeight = document.body.clientHeight * 0.7
-        if b.clientHeight > maxHeight
+        maxHeight = document.body.clientHeight * 0.7 - 23
+        rect =  b.getBoundingClientRect()
+        if rect.height > maxHeight
           sum = 0
           n = 0
           ali = b.getElementsByTagName('a')
@@ -45,12 +46,17 @@ onMount =>
             sum += i.clientWidth
             ++n
           area = (sum + 7*(n-1)) * (7+ali[0].clientHeight)
-          w = 37 + Math.round Math.max(
-            Math.sqrt(area) - 23
-            area / maxHeight
+          w =  Math.min(
+            rect.right
+            Math.round Math.max(
+              Math.sqrt(area) + 70
+              area / maxHeight
+            )
           )
+          console.log w
           b.style="width:#{w}px;flex-wrap:wrap;flex-direction:row-reverse"
-          b.style.width = (3+minw(b))+'px'
+          b.style.width = minw(b) + 2 +'px'
+          console.log b.style.width
       return
   )
 
@@ -87,6 +93,7 @@ i
 b
   background #fff
   border 1px solid #eee
+  box-sizing border-box
   flex-direction column
   font-size 14px
   justify-content space-between
