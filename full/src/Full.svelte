@@ -1,10 +1,9 @@
 <script lang="coffee">
-
 + f
 
 full = ''
 
-onI18N (o)=>
+onI18n (o)=>
   {full} = o
   return
 
