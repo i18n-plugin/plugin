@@ -1,7 +1,7 @@
 {
   "name": "@8p/topfix",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "repository": "https://github.com/i18n-plugin/plugin.git",
   "homepage": "https://github.com/i18n-plugin/plugin/tree/main/topfix",
   "dependencies": {
