@@ -9,7 +9,12 @@ export splitSlash = (url)=>
 < (callback) =>
   notFound = =>
 
+  + pre
+
   route (url)=>
+    if url == pre
+      return
+    pre = url
     args = FUNC.get splitSlash(url)
     if args
       callback url, ...args

@@ -1,10 +1,13 @@
 {
   "name": "@8p/nav",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": "https://github.com/i18n-plugin/plugin.git",
   "homepage": "https://github.com/i18n-plugin/plugin/tree/main/nav",
-  "dependencies": { "@8n/on": "^0.0.1", "@w5/split": "^0.0.1" },
+  "dependencies": {
+    "@8n/on": "^0.0.1",
+    "@w5/split": "^0.0.1"
+  },
   "files": [
     "*"
   ],
