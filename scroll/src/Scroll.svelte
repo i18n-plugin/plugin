@@ -51,10 +51,19 @@ down = (e)=>
     pointerunbind = undefined
     return
 
+  pre = e.clientY
+
   unbind = On body, {
     lostpointercapture: pointerunbind
     pointerup: pointerunbind
-    pointermove: click
+    pointermove: ({clientY})=>
+      b.scrollTop += Math.round(
+        b.scrollHeight * (
+          clientY - pre
+        ) / aside.clientHeight
+      )
+      pre = clientY
+      return
   }
   return
 #       mv = b.value
