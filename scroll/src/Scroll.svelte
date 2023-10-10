@@ -13,7 +13,7 @@ b.scroll(@&b)
   @8n/on:On
   svelte > tick
 
-+ b, aside, bar, si, turn, pointerunbind
++ b, aside, bar, si, turn, pointerunbind, timer
 
 SCROLL_CLS = "scroll"
 
@@ -80,6 +80,12 @@ retop = (height)=>
     return
   ch = b.clientHeight
   si.style.top = (3 + Math.round( (ch - (height or si.offsetHeight) - 6) * b.scrollTop  / (bar.scrollHeight - ch) )) + 'px'
+  clearTimeout timer
+  timer = setTimeout(
+    =>
+      aside.style.opacity = 0
+    1000
+  )
   return
 
 onMount =>
