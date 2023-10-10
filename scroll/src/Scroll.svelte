@@ -78,6 +78,7 @@ down = (e)=>
 retop = (height)=>
   if not turn
     return
+  av.style.opacity = 1
   ch = b.clientHeight
   si.style.top = (3 + Math.round( (ch - (height or si.offsetHeight) - 6) * b.scrollTop  / (bar.scrollHeight - ch) )) + 'px'
   clearTimeout timer
