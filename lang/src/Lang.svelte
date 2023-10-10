@@ -1,13 +1,17 @@
 <script lang="coffee">
 > ./index.js > set
   ./langLi.js
-  ./onI18n.js
   @8n/on:On
+  svelte > tick
 
 LI = []
 W = 'w'
 
-+ LANG, e, d, lang
++ LANG, e, d, lang, b
+
+onI18n (o)=>
+  {lang} = o
+  return
 
 onMount =>
   [LANG, LI] = await langLi()
@@ -29,6 +33,33 @@ onMount =>
           return
       )
       d = !d
+      if d
+        await tick()
+        maxHeight = document.body.clientHeight * 0.5
+        if b.clientHeight > maxHeight
+          sum = 0
+          n = 0
+          ali = b.getElementsByTagName('a')
+          for i from ali
+            sum += i.clientWidth
+            ++n
+          area = (sum + 7*(n-1)) * (7+ali[0].clientHeight)
+          width = 35 + Math.round Math.max(
+            Math.sqrt(area)
+            area / maxHeight
+          )
+          b.style="width:#{width}px;flex-wrap:wrap;flex-direction:row-reverse"
+          height = b.clientHeight
+          loop
+            console.log height, b.clientHeight, width
+            if height == b.clientHeight
+              b.style.width = (--width)+'px'
+              console.log height, b.clientHeight, width
+            else
+              b.style.width = (++width)+'px'
+              console.log '>',height, b.clientHeight, width
+              break
+
       return
   )
 
@@ -44,7 +75,7 @@ c = (l)=>
 i
   m-c.w(title:lang @&e)
   +if d
-    b
+    b(@&b)
       +each LI as i
         a(@click={c(i[0])} class:n={i[0]==LANG}) {i[1]}
 </template>
@@ -65,11 +96,10 @@ i
 b
   background #fff
   border 1px solid #eee
-  flex-direction row-reverse
-  flex-wrap wrap
+  flex-direction column
   font-size 14px
   justify-content space-between
-  padding 14px 21px 7px
+  padding 14px 14px 7px 21px
   position absolute
   right -18px
   top 30px
@@ -79,6 +109,7 @@ b
     color #666
     margin 0 7px 7px 0
     user-select none
+    white-space nowrap
 
     &.n
       border-bottom 2px solid #000

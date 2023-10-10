@@ -18,6 +18,7 @@
     "./*": "./lib/*"
   },
   "devDependencies": {
-    "~": "link:../../site/src"
+    "~": "link:../../site/src",
+    "@8p/lang": "link:."
   }
 }

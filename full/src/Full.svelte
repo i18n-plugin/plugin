@@ -2,6 +2,12 @@
 
 + f
 
+full = ''
+
+onI18N (o)=>
+  {full} = o
+  return
+
 nowFull = =>
   f = document.fullscreenElement
   return
