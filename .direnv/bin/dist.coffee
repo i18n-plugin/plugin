@@ -27,7 +27,7 @@ if existsSync src
     package_json_fp
     'utf8'
   )
-
+  delete json.devDependencies
   {version} = json
 
   version = version.split('.')
