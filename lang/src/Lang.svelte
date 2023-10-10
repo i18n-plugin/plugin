@@ -36,7 +36,7 @@ onMount =>
       d = !d
       if d
         await tick()
-        maxHeight = document.body.clientHeight * 0.5
+        maxHeight = document.body.clientHeight * 0.7
         if b.clientHeight > maxHeight
           sum = 0
           n = 0
