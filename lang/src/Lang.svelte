@@ -66,6 +66,7 @@ b
   background #fff
   border 1px solid #eee
   flex-direction row-reverse
+  flex-wrap wrap
   font-size 14px
   justify-content space-between
   padding 14px 21px 7px

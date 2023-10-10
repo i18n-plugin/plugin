@@ -1,7 +1,7 @@
 {
   "name": "@8p/lang",
   "type": "module",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "repository": "https://github.com/i18n-plugin/plugin.git",
   "homepage": "https://github.com/i18n-plugin/plugin/tree/main/lang",
   "dependencies": {
