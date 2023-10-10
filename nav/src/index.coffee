@@ -26,9 +26,10 @@ export splitSlash = (url)=>
     # set route
     (url, args...)=>
       FUNC.set url, args
-      if splitSlash(nowUrl()) == url
-        callback url, ...args
-        notFound = 0
+      if url != pre
+        if splitSlash(nowUrl()) == url
+          callback url, ...args
+          notFound = 0
       return
 
     # clear route
