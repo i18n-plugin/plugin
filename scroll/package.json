@@ -1,0 +1,15 @@
+{
+  "name": "@8p/scroll",
+  "type": "module",
+  "version": "0.0.0",
+  "repository": "https://github.com/i18n-plugin/plugin.git",
+  "homepage": "https://github.com/i18n-plugin/plugin/tree/main/scroll",
+  "dependencies": { "@8n/on": "^0.0.1", "lodash-es": "^4.17.21" },
+  "files": [
+    "*"
+  ],
+  "exports": {
+    ".": "./lib/index.js",
+    "./*": "./lib/*"
+  }
+}
