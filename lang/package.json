@@ -16,5 +16,8 @@
   "exports": {
     ".": "./lib/Index.svelte",
     "./*": "./lib/*"
+  },
+  "devDependencies": {
+    "~": "link:../../site/src"
   }
 }
