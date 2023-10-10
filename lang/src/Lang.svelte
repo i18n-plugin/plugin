@@ -2,6 +2,7 @@
 > ./index.js > set
   ./langLi.js
   @8n/on:On
+  @8n/minw
   svelte > tick
 
 LI = []
@@ -44,22 +45,12 @@ onMount =>
             sum += i.clientWidth
             ++n
           area = (sum + 7*(n-1)) * (7+ali[0].clientHeight)
-          width = 35 + Math.round Math.max(
+          w = 35 + Math.round Math.max(
             Math.sqrt(area)
             area / maxHeight
           )
-          b.style="width:#{width}px;flex-wrap:wrap;flex-direction:row-reverse"
-          height = b.clientHeight
-          loop
-            console.log height, b.clientHeight, width
-            if height == b.clientHeight
-              b.style.width = (--width)+'px'
-              console.log height, b.clientHeight, width
-            else
-              b.style.width = (++width)+'px'
-              console.log '>',height, b.clientHeight, width
-              break
-
+          b.style="width:#{w}px;flex-wrap:wrap;flex-direction:row-reverse"
+          b.style.width = (3+minw(b))+'px'
       return
   )
 

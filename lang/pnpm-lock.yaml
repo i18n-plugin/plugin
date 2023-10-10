@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@8n/minw':
+    specifier: ^0.0.1
+    version: 0.0.1
   '@8n/on':
     specifier: ^0.0.1
     version: 0.0.1
@@ -27,6 +30,10 @@ devDependencies:
     version: link:../../site/src
 
 packages:
+
+  /@8n/minw@0.0.1:
+    resolution: {integrity: sha512-N6Qxz2Pnv3AZuIW7eBdTPeIJcWKNiZjGAgDwkefno0vcbOwcF1W7Yxzjgu8dtPqxkpEBoi5VDJ54BKDyBmvXiw==}
+    dev: false
 
   /@8n/on@0.0.1:
     resolution: {integrity: sha512-7PNDqdfDpEcyNMBzbHkOtUAbQlsTCHmX0f3ftqtgnx7o8esdS43vDru7qjFwdtTGS0pXvt/CJVuJpK+JzmAGBw==}

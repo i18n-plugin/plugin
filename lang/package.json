@@ -5,6 +5,7 @@
   "repository": "https://github.com/i18n-plugin/plugin.git",
   "homepage": "https://github.com/i18n-plugin/plugin/tree/main/lang",
   "dependencies": {
+    "@8n/minw": "^0.0.1",
     "@8n/on": "^0.0.1",
     "@w5/msgpack": "^0.0.2",
     "@w5/pair": "^0.0.2",
@@ -18,7 +19,7 @@
     "./*": "./lib/*"
   },
   "devDependencies": {
-    "~": "link:../../site/src",
-    "@8p/lang": "link:."
+    "@8p/lang": "link:.",
+    "~": "link:../../site/src"
   }
 }
