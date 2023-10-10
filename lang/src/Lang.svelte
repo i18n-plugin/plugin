@@ -53,10 +53,8 @@ onMount =>
               area / maxHeight
             )
           )
-          console.log w
           b.style="width:#{w}px;flex-wrap:wrap;flex-direction:row-reverse"
           b.style.width = minw(b) + 2 +'px'
-          console.log b.style.width
       return
   )
 
