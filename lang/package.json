@@ -1,7 +1,7 @@
 {
   "name": "@8p/lang",
   "type": "module",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "repository": "https://github.com/i18n-plugin/plugin.git",
   "homepage": "https://github.com/i18n-plugin/plugin/tree/main/lang",
   "dependencies": {
@@ -17,9 +17,5 @@
   "exports": {
     ".": "./lib/Index.svelte",
     "./*": "./lib/*"
-  },
-  "devDependencies": {
-    "@8p/lang": "link:.",
-    "~": "link:../../site/src"
   }
 }
