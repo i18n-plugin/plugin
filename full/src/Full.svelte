@@ -1,12 +1,6 @@
 <script lang="coffee">
 + f
 
-full = ''
-
-onI18n (o)=>
-  {full} = o
-  return
-
 nowFull = =>
   f = document.fullscreenElement
   return
