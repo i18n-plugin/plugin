@@ -1,20 +1,21 @@
 <script lang="coffee">
-+ f
+> @8n/on:On
 
-nowFull = =>
-  f = document.fullscreenElement
-  return
++ f
 
 click = =>
   if document.fullscreenElement
-    p = document.exitFullscreen()
+    document.exitFullscreen()
   else
-    p = document.body.requestFullscreen navigationUI:'hide'
-  try
-    await p
-  finally
-    nowFull()
+    document.body.requestFullscreen navigationUI:'hide'
   return
+
+onMount =>
+  On document,{
+    fullscreenchange:=>
+      f = document.fullscreenElement
+      return
+  }
 </script>
 
 <template lang="pug">
